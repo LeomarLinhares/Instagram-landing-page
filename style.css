@@ -153,3 +153,21 @@ body {
 }
 
 /* Responsividade */
+
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .group {
+        border: 1px solid transparent;
+    }
+
+    #instagram-phone {
+        display: none;
+    }
+
+    .instagram-continue {
+        width: 100%;
+    }
+}
