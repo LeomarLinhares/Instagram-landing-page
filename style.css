@@ -4,8 +4,8 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: sans-serif;
-    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
 }
 
 body {
@@ -28,8 +28,6 @@ body {
 
 #instagram-phone {
     display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     min-width: 454px;
     background-repeat: no-repeat;
@@ -38,9 +36,25 @@ body {
 }
 
 .slide {
+    width: 240px;
+    height: 427px;
+    display: flex;
     margin-top: 22%;
-    margin-left: 19.5%;
+    margin-left: 33.2%;
     margin-bottom: 30%;
+}
+
+.print {
+    position: absolute;
+    left: 33.2%;
+}
+
+.print.fade {
+    z-index: 6;
+}
+
+.print.nextFade {
+    z-index: 5;
 }
 
 .instagram-continue {
@@ -116,6 +130,10 @@ body {
     color: #0095f6;
 }
 
+.link-blue:hover {
+    cursor: pointer;
+}
+
 .get-the-app {
     display: flex;
     flex-direction: column;
@@ -124,9 +142,13 @@ body {
     width: 100%;
     padding: 1.3rem 0;
 
-    margin-top: 2rem;
+    margin-top: 1rem;
     
     min-width: 19rem;
+}
+
+.get-app {
+    margin-bottom: 2rem;
 }
 
 .get-the-app .download {
@@ -148,6 +170,22 @@ body {
 
 .app-download:nth-child(2) {
     background-image: url('./img/googleplay.png');
+}
+
+/* Animação */
+.fade {
+    animation-name: fade;
+    animation-duration: 1300ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 /* Responsividade */

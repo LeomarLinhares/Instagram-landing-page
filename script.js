@@ -1,25 +1,24 @@
-var imgSrcs = [
-    "./img/slide1.jpg",
-    "./img/slide2.jpg",
-    "./img/slide3.jpg",
-    "./img/slide4.jpg",
-    "./img/slide5.jpg"
-]
-
-var index = 0;
+var slideBox = document.querySelector('.slide').children;
+var index = -1;
 
 function sliderInterval() {
-    window.setInterval('changeImage()', 5000);
+    window.setInterval('changeImage()', 5500);
 }
 
 function changeImage() {
+    const fade = document.querySelector('.fade');
+    const nextFade = document.querySelector('.nextFade');
+
+    fade.classList.remove('fade');
+    nextFade.classList.replace('nextFade', 'fade');
+
     if (index == 4) {
         index = 0;
     } else {
         index++
     }
-    let image = document.querySelector('#slider');
-    image.src = imgSrcs[index];
+
+    slideBox[index].classList.add('nextFade');
 }
 
-sliderInterval();
+sliderInterval()
